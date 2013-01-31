@@ -1,0 +1,5 @@
+escape ^Zz
+autodetach on
+hardstatus string "[screen %n%?: %t%?] %h"
+termcapinfo xterm ti@:te@
+scrollback 10000
