@@ -1,0 +1,8 @@
+<disk type='network' device='disk'>
+  <driver name='qemu' cache='none'/>
+  <source protocol='sheepdog' name='vol00'>
+    <host name='127.0.0.1' port='7000'/>
+  </source>
+  <target dev='vdb' bus='virtio'/>
+</disk>
+
