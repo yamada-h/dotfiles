@@ -1,0 +1,5 @@
+[CentOS-7-Base]
+name=CentOS-$releasever - Base
+baseurl=http://ftp.jaist.ac.jp/pub/Linux/CentOS/7/os/$basearch/
+enabled=0
+gpgcheck=1
