@@ -1,5 +1,0 @@
-escape ^Zz
-autodetach on
-hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] (%l) "
-termcapinfo xterm ti@:te@
-defscrollback 10000
