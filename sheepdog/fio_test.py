@@ -14,8 +14,11 @@ def ssh(cmd):
   SSH = 'ssh root@10.0.254.249 '
   return call(SSH + cmd)
 
-ssh('umount /sheep')
-call('sudo virsh detach-device vm00 device.xml')
+try:
+  ssh('umount /sheep')
+  call('sudo virsh detach-device vm00 device.xml')
+except subprocess.CalledProcessError as e:
+  print e
 
 for i in range(3000):
   print '%s: LOOP %d' % (datetime.now(), i)
