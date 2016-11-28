@@ -12,3 +12,6 @@ sudo apt-get install -y yasm autoconf dh-autoreconf pkg-config
 sudo apt-get install -y liburcu-dev libzookeeper-mt-dev
 sudo apt-get install -y libcorosync-dev
 sudo apt-get install -y dh-systemd devscripts
+
+# ZooKeeper
+sudo apt install -y zookeeper zookeeperd zookeeper-bin
