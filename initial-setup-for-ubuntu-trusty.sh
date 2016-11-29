@@ -15,3 +15,6 @@ sudo apt-get install -y dh-systemd devscripts
 
 # ZooKeeper
 sudo apt install -y zookeeper zookeeperd zookeeper-bin
+
+# ZooKeeper build
+sudo apt install -y ant default-jdk libcppunit-dev
