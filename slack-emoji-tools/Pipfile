@@ -9,6 +9,7 @@ name = "pypi"
 slackclient = "*"
 python-dotenv = "*"
 requests = "*"
+sqlalchemy = "*"
 
 [requires]
 python_version = "3.5"
