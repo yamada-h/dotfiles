@@ -34,18 +34,18 @@ msg2 = new_emojis
 
 token = os.environ['SLACK_API_TOKEN']
 slack = SlackClient(token)
-channel = '#general'
-icon_emoji = ':innocent:'
-username = 'emoji bot'
-slack.api_call(
-    'chat.postMessage',
-    channel=channel,
-    icon_emoji=icon_emoji,
-    username=username,
-    text=msg1)
-slack.api_call(
-    'chat.postMessage',
-    channel=channel,
-    icon_emoji=icon_emoji,
-    username=username,
-    text=msg2)
+
+def post(msg):
+    channel = '#general'
+    #channel = '#botplayground'
+    icon_emoji = ':innocent:'
+    username = 'emoji bot'
+    slack.api_call(
+        'chat.postMessage',
+        channel=channel,
+        icon_emoji=icon_emoji,
+        username=username,
+        text=msg)
+
+post(msg1)
+post(msg2)
