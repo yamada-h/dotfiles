@@ -18,7 +18,7 @@ session = Session()
 els = session.query(EmojiList).all()
 
 now = JST.localize(datetime.now()).astimezone(UTC)
-dt = now-timedelta(days=7)
+dt = now-timedelta(days=8)
 
 q = session.query(EmojiList)
 q = q.filter(EmojiList.created_at >= dt.strftime('%Y-%m-%d'))
