@@ -36,7 +36,7 @@ token = os.environ['SLACK_API_TOKEN']
 slack = SlackClient(token)
 
 def post(msg):
-    channel = '#general'
+    channel = '#devnull'
     #channel = '#botplayground'
     icon_emoji = ':innocent:'
     username = 'emoji bot'
