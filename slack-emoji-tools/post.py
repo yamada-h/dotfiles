@@ -28,12 +28,7 @@ els = q.all()
 d0 = set(json.loads(els[0].data))
 d1 = set(json.loads(els[-1].data))
 
-new_emojis = ':'+'::'.join(sorted(list((d1-d0))))+':'
-msg1 = "新着絵文字のお知らせ"
-msg2 = new_emojis
-
-token = os.environ['SLACK_API_TOKEN']
-slack = SlackClient(token)
+emojis = sorted(list((d1-d0)))
 
 def post(msg):
     channel = '#devnull'
@@ -47,5 +42,11 @@ def post(msg):
         username=username,
         text=msg)
 
+token = os.environ['SLACK_API_TOKEN']
+slack = SlackClient(token)
+msg1 = "新着絵文字のお知らせ"
 post(msg1)
-post(msg2)
+
+for i in range((len(emojis)-1)//23+1):
+  msg2 = ':'+'::'.join(emojis[i*23:(i+1)*23])+':'
+  post(msg2)
